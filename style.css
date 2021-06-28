@@ -1,0 +1,544 @@
+:root{
+    --backColor: rgb(245, 245, 245);
+    --primaryColor: rgb(0, 177, 79);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--backColor);
+    font-size: 1rem;
+    font-family: "Poppins";
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+}
+
+.row-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 90%;
+    padding: 0 6px;
+}
+
+.header-content-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 13em;
+}
+
+.grab-logo{
+    width: 5.6em;
+    height: 2.2em;
+}
+
+.menu-nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.menu-nav i{
+    font-size: 2em;
+}
+
+.menu-nav span{
+    font-size: .625em;
+}
+
+.header-content-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 21em;
+    padding: 16px 15px 24px;
+    color: #363a45;
+    font-weight: 600;
+    margin-right: 3em;
+}
+
+.partner-toggle span{
+    margin: 0 .5em;
+}
+
+.partner-toggle{
+    position: relative;
+}
+
+.header-content-right a{
+    text-decoration: none;
+    color: #363a45;
+}
+
+.header-content-right .search-logo{
+    font-size: 1.375em;
+}
+
+.partner-contents{
+    list-style-type: none;
+    position: absolute;
+    bottom: -9.7em;
+    width: 15em;
+    background-color: white;
+}
+
+.partner-contents li{
+    padding: .625em 0;
+}
+
+.partner-contents li a{
+    margin: 0 1.25em;
+}
+
+/* Content */
+
+.hero{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 92vh;
+    background-color: var(--primaryColor);
+    color: white;
+}
+
+.slogan{
+    margin: auto 0 auto 10em;
+    max-width: 100%;
+}
+.slogan h2{
+    font-size: 4.3em;
+    width: 20ch;
+    max-width: 20ch;
+}
+
+.covid-info-link{
+    margin: 2em 0 0 10em;
+}
+
+.covid-info-link a{
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+    font-size: 1.2em;
+}
+
+.circle{
+    color: rgb(19, 111, 216);
+}
+
+/* Introduction Content */
+
+.intro{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--backColor);
+    padding: 8em;
+    padding-top: 5em;
+}
+
+.intro-col-left{
+    display: flex;
+    flex-direction: column;
+    width: 35.6em;
+}
+
+.container-content-top{
+    display: flex;
+    justify-content: space-between;
+}
+.content-col{
+    width: 15.9em;
+    /* background-color: yellowgreen; */
+}
+
+.content-left-col h2{
+    font-size: 2.6rem;
+    line-height: 1.3em;
+    color: rgb(22, 26, 29);
+}
+
+.content-right-col :nth-child(1){
+    font-size: 1.125rem;
+    padding-bottom: 1.6em;
+    line-height: 1.3em;
+    color: rgb(56, 62, 67);
+}
+
+.content-right-col a{
+    text-decoration: none;
+    color: rgb(22, 26, 29);
+    font-size: 1.125rem;
+    border-bottom: 2px solid rgb(22, 26, 29);
+    padding: 0;
+    font-weight: 600;
+}
+
+.content-right-col p .arrow-right{
+    font-size: 1.5rem;
+    margin-left: .6em;
+    margin-right: .6em;
+    padding: 0;
+}
+
+.content-right-col :nth-child(2){
+    display: flex;
+    align-content: center;
+    padding-bottom: 0;
+}
+
+.left-col-image{
+    width: 100%;
+    max-width: 100%;
+    height: 39.5em;
+    padding-top: 2.4em;
+}
+
+.container-content-top-right{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.container-content-top-right span{
+    display: flex;
+    align-items: center;
+}
+
+.container-content-top-right > :first-child{
+    margin-bottom: 1em;
+}
+
+.container-content-top-right img{
+    width: 3.5em;
+    padding-right: .8em;
+}
+
+.container-content-top-right a{
+    color: rgb(22, 26, 29);
+    text-decoration: none;
+    border-bottom: 2px solid rgb(22, 26, 29);
+    font-weight: 600;
+}
+
+.col-right-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-content-bot-right{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 9em;
+}
+
+.content-col{
+    width: 15.9em;
+}
+
+.content-bot-left h2{
+    font-size: 2.6rem;
+    line-height: 1.3em;
+    color: rgb(22, 26, 29);
+}
+
+.content-bot-right p{
+    font-size: 1.125rem;
+    padding-bottom: 1.6em;
+    line-height: 1.3em;
+    color: rgb(56, 62, 67)
+}
+
+.content-bot-right a{
+    text-decoration: none;
+    color: rgb(22, 26, 29);
+    border-bottom: 2px solid rgb(22, 26, 29);
+    font-weight: 600;
+}
+
+.content-bot-right p .arrow-right{
+    font-size: 1.5rem;
+    margin-left: .6em;
+    margin-right: .6em;
+}
+
+.intro-col-right{
+    width: 35.6em;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-col-right .grab-delivery-image{
+    width: 100%;
+    padding-top: 2.4em;
+}
+
+/* Services Section */
+
+.services{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: var(--backColor);
+    padding: 8em;
+}
+
+.services-header{
+    width: 100%;
+    padding: 5em 0em 8em 0em;
+}
+
+.services-header h2{
+    font-size: 2.9rem;
+    max-width: 30ch;
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 24%;
+    background-color: white;
+    margin-right: .7em;
+    margin-bottom: 2.2em;
+}
+
+.service .service-desc h2{
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: rgb(22, 26, 29);
+}
+
+.service .service-desc p{
+    font-size: 1.1;
+    color: rgb(85, 89, 92);
+}
+
+.service .service-desc{
+    width: 26ch;
+    padding: .5em 1.5em 2.6em 1.5em;
+}
+
+.service-icon img{
+    width: 15.5rem;
+}
+
+.services-lists{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.get-app{
+    font-size: 1.5rem;
+    padding-top: 5rem;
+}
+.get-app h2{
+    font-weight: 500;
+    padding-bottom: 1rem;
+    color: rgb(56, 62, 67);
+}
+
+.get-app-links img{
+    width: 7.5em;
+}
+
+/* Newsroom */
+
+.news-room{
+    width: 100%;
+    padding: 7.5rem 8rem;
+    background-color: rgb(0, 177, 79);
+}
+
+.news-room h2{
+    text-transform: capitalize;
+    font-size: 2.6rem;
+    color: rgb(214, 239, 82);
+    font-weight: 500;
+    padding-bottom: .5em;
+}
+
+.news-room a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.news-room i{
+    margin-left: .5em;
+}
+
+/* Footer */
+
+.footer-container{
+    width: 100%;
+    padding: 3em 8em 5em 8em;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(234, 239, 242);
+}
+
+.footer-container .grab-footer-logo{
+    width: 4.8rem;
+    height: 1.8rem;
+    margin-bottom: 1em;
+}
+
+.add-column{
+    line-height: 1rem;
+}
+
+.footer-address{
+    list-style-type: none;
+}
+
+.footer-address li{
+    width: 20ch;
+}
+
+.footer-address .header-add{
+    font-weight: 600;
+    color: rgb(54, 58, 69);
+    font-size: 1rem;
+    margin: 0 0 1.5em 0;
+}
+
+.footer-address li:not(:first-child){
+    font-size: .9rem;
+    line-height: 1.8em;
+}
+
+.footer-columns h4{
+    font-weight: 600;
+    font-size: .9rem;
+    color: rgb(54, 58, 69);
+    margin-top: 1em;
+}
+
+.soc-med i{
+     font-size: 1.5rem;
+     margin: .7em .1em .8em .1em;
+}
+
+.version-selection-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5em .7em;
+    background-color: transparent;
+    width: fit-content;
+    border-radius: 3px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.version-selection-button a{
+    text-decoration: none;
+    color: rgb(54, 58, 69);
+}
+
+.version-selection-button div img{
+    width: 1.5rem;
+    margin-right: .5em;
+}
+
+.version-selection-button div{
+    display: flex;
+    align-items: center;
+}
+
+.version-selection-button .version-selected{
+    display: flex;
+    margin-right: 2em;
+}
+
+.footer-links-container{
+    display: flex;
+}
+
+.merchant-footer-links li:last-child{
+    max-width: 13ch;
+}
+
+
+.footer-links-container > .footer-columns{
+    margin-left: 3em;
+}
+
+.footer-links-container * ul{
+    list-style-type: none;
+}
+
+.footer-links-container * a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: rgb(54, 58, 69);
+    line-height: 2rem;
+}
+
+.footer-columns h3{
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: rgb(54, 58, 69);
+    margin-bottom: 1em;
+}
+
+.final-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 1.2em 1.7em 1.2em;
+    background-color: rgb(54, 58, 69);
+}
+
+.final-footer .download-app-icons img{
+    width: 8rem;
+    margin-left: .5em;
+}
+
+.final-footer-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 1.5em;
+}
+.copyright-text i{
+    margin-right: .5em;
+}
+
+.copyright-text{
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.link-with-dot{
+    position: relative;
+}
+
+.link-with-dot::after{
+    content: '';
+    background: white;
+    width: 8px;
+    height: 8px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 5px;
+    right: -15px;
+}
+
+
+
+
