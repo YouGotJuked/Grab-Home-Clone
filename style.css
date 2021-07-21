@@ -1,6 +1,9 @@
 :root{
     --backColor: rgb(245, 245, 245);
     --primaryColor: rgb(0, 177, 79);
+
+    --icon: "\f0c9";
+    --icon2: "\f00d";
 }
 
 *{
@@ -18,8 +21,11 @@ body{
 header{
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.902);
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .row-header{
@@ -45,6 +51,12 @@ header{
 
 /* Menu Nav */
 
+.menu-nav-button{
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
 .menu-nav{
     display: flex;
     flex-direction: column;
@@ -55,11 +67,60 @@ header{
 
 .menu-nav i{
     font-size: 2em;
+    transition: all .3s ease;
+    color: transparent;
+    position: relative;
+    cursor: pointer;
 }
 
 .menu-nav span{
     font-size: .625em;
 }
+
+.menu-nav-button::before{
+    transform: rotate(180deg);
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 2em;
+    font-weight: 600;
+    content: var(--icon);
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    transition: all .3s linear;
+}
+
+.menu-nav-button.open-menu::before{
+    transform: rotate(180deg);
+    transform: translateX(-50%);
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 2em;
+    font-weight: 600;
+    content: var(--icon2);
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 50%;
+}
+
+/* .menu-nav-button::after{
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-size: 2em;
+    font-weight: 600;
+    content: var(--icon2);
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+
+    transition: all .3s linear;
+} */
+
 
 .menu-nav-container{
     display: flex;
@@ -72,6 +133,14 @@ header{
     url(./Images/grab-about-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    pointer-events: none;
+
+    transform: translateY(-10%);
+    transform-origin: top;
+    opacity: 0;
+    z-index: 3;
+
+    transition: all .3s ease;
 }
 /* .nav-links-consumer{
     display: flex;
@@ -99,6 +168,15 @@ header{
 
 
 /* Menu Nav Links */
+
+.menu-nav-links-left{
+}
+
+.nav-links-right{
+    pointer-events: none;
+    cursor: none;
+}
+
 .nav-links-right .link-container{
     padding-top: 5em;
     width: 100%;
@@ -130,6 +208,8 @@ header{
     flex-wrap: wrap;
     display: block;
     margin-bottom: 1em;
+    /* cursor: pointer;
+    pointer-events: all; */
 }
 
 .nav-links-right * h4{
@@ -166,13 +246,19 @@ header{
     display: flex;
 }
 
-.menu-nav-container{
-    display: none;
-}
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.menu-nav-container.open-menu{
+/* .menu-nav-container{
+    display: none;
+} */
+
+/* .menu-nav-container.open-menu{
     display: flex;
 }
+
+.menu-nav-container.close-menu{
+    display: none;
+} */
 
 
 /* <++++++++++++++++++++++++++++++> */
@@ -184,11 +270,12 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 21em;
+    /* width: 21em; */
     padding: 16px 15px 24px;
     color: #363a45;
     font-weight: 600;
-    margin-right: 3em;
+
+    /* margin-right: 3em; */
 }
 
 .partner-toggle span{
@@ -197,17 +284,23 @@ header{
 
 .partner-toggle{
     position: relative;
+    margin-right: 2em;
     cursor: pointer;
 }
 
 .partner-toggle i {
-    color: var(--primaryColor);
-    transform: rotate(180deg);
+    color: rgb(54, 58, 69);
+    /* transform: rotate(180deg); */
+
+    transition: all .3s ease;
 }
 
 .header-content-right a{
     text-decoration: none;
     color: #363a45;
+    cursor: pointer;
+    pointer-events: all;
+    margin-right: 2em;
 }
 
 .header-content-right .search-logo{
@@ -223,13 +316,18 @@ header{
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
     overflow: hidden;
-    display: none;
+    transform: translateY(-10%);
+    transform-origin: top;
+    opacity: 0;
+    cursor: none;
+    pointer-events: none;
+
+    transition: all .3s ease-in-out;
 }
 
 .partner-contents li{
     padding: .8em 0;
     width: 100%;
-    cursor: pointer;
     border-bottom: 1px solid rgb(241, 244, 246);
 }
 
@@ -238,7 +336,47 @@ header{
     margin: 0 1.25em;
     display: block;
     width: 92%;
+    pointer-events: none;
+    cursor: none;
 }
+
+/* Search */
+
+.header-search{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-text{
+    line-height: 2.2rem;
+    background-color: transparent;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 1rem;
+    font-weight: 500;
+    width: 0rem;
+
+    transition: all .5s ease;
+}
+
+.search-logo{
+    position: fixed;
+    right: 5em;
+    cursor: pointer;
+}
+
+.header-text.header-search-clicked{
+    width: 20rem;
+    outline: 1px solid rgb(253, 253, 253);
+    background-color: rgb(241, 244, 246);
+}
+
+/* .search-logo.search-clicked{
+    position: absolute;
+} */
 
 /* header animations */
 .partner-contents li a::after{
@@ -248,16 +386,16 @@ header{
     background-color: var(--primaryColor);
     width: 0%;
     height: 2px;
-    transition: all .5s ease;
+    transition: all .4s ease;
 }
 
 .partner-contents li:hover a::after{
     width: 90%;
 }
 
-.partner-contents.open{
+/* .partner-contents.open{
     display: block;
-}
+} */
 
 /* <--------> */
 
@@ -279,6 +417,7 @@ header{
     font-size: 4.3em;
     width: 20ch;
     max-width: 20ch;
+    pointer-events: none;
 }
 
 .covid-info-link{
@@ -470,6 +609,7 @@ header{
     background-color: white;
     margin-right: .7em;
     margin-bottom: 2.2em;
+    overflow: hidden;
 }
 
 .service .service-desc h2{
@@ -489,7 +629,13 @@ header{
 }
 
 .service-icon img{
-    width: 15.5rem;
+    width: 18rem;
+}
+
+.services-lists-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .services-lists{

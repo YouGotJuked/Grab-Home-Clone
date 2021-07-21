@@ -16,8 +16,11 @@
         <div class="row-header">
             <div class="header-content-left">
                 <div class="menu-nav">
-                    <i class="fas fa-bars"></i>
-                    <span>Menu</span>
+                    <div class="menu-nav-button">
+                        <i class="fas fa-bars menu-logo-open"></i>
+                        <!-- <i class="fas fa-times menu-logo-close"></i> -->
+                        <span class="logo-menu">Menu</span>
+                    </div>
                     <div class="menu-nav-container">
                         <div class="menu-nav-links-left">
                             <ul>
@@ -145,17 +148,20 @@
                 <img src="./Images/grab_logo.png" alt="Grab Logo" class="grab-logo">
             </div>
             <div class="header-content-right">
-                <div class="partner-toggle">
+                <div class="partner-toggle" id="partner-toggle">
                     <span>Be our Partner</span>
-                    <i class="fa fa-angle-down"></i>
-                        <ul class="partner-contents">
-                            <li><a href="#" class="partner-contents-links1">Grab Driver</a></li>
-                            <li><a href="#" class="partner-contents-links2">Grab Rider</a></li>
-                            <li><a href="#" class="partner-contents-links3">Food/ Mart Merchant</a></li>
+                    <i class="fa fa-angle-down partner-arrow"></i>
+                        <ul class="partner-contents" id="contents">
+                            <li><a href="#" class="partner-contents-links1 partner-link">Grab Driver</a></li>
+                            <li><a href="#" class="partner-contents-links2 partner-link">Grab Rider</a></li>
+                            <li><a href="#" class="partner-contents-links3 partner-link">Food/ Mart Merchant</a></li>
                         </ul>
                 </div>
-                    <a href="#">Help Centre</a>
+                <a href="#">Help Centre</a>
+                <span class="header-search">
+                <input type="text" class="header-text">
                 <i class="fa fa-search search-logo"></i>
+                </span>
             </div>
         </div>
     </header>
@@ -226,86 +232,88 @@
             <div class="services-header">
                 <h2>Learn more about the many different ways we serve your everyday needs.</h2>
             </div>
-            <div class="services-lists">
-                <div class="service-transport service">
-                    <div class="service-icon">
-                        <img src="./Images/transport-icon.png" alt="Transport icon">
+            <div class="services-lists-container">
+                <div class="services-lists">
+                    <div class="service-transport service">
+                        <div class="service-icon">
+                            <img src="./Images/transport-icon.png" alt="Transport icon">
+                        </div>
+                        <div class="service-desc">
+                            <h2>Transport</h2>
+                            <p>Takes you from A to B safely with upfront prices.</p>
+                        </div>
                     </div>
-                    <div class="service-desc">
-                        <h2>Transport</h2>
-                        <p>Takes you from A to B safely with upfront prices.</p>
+                    <div class="service-food service">
+                        <div class="service-icon">
+                        <img src="./Images/foods-icon.png" alt="Foods icon"> 
+                        </div>
+                        <div class="service-desc">
+                            <h2>Food</h2>
+                            <p>Gets you a meal when you're too busy (or tired) to go out.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="service-food service">
-                    <div class="service-icon">
-                       <img src="./Images/foods-icon.png" alt="Foods icon"> 
+                    <div class="service-mart service">
+                        <div class="service-icon">
+                            <img src="./Images/mart-icon.png" alt="Food icon">  
+                        </div>
+                        <div class="service-desc">
+                            <h2>Mart</h2>
+                            <p>Find everything you need</p>
+                        </div>
                     </div>
-                    <div class="service-desc">
-                        <h2>Food</h2>
-                        <p>Gets you a meal when you're too busy (or tired) to go out.</p>
+                    <div class="service-delivery service">
+                        <div class="service-icon">
+                            <img src="./Images/delivery-icon.png" alt="Food icon">
+                        </div>
+                        <div class="service-desc">
+                            <h2>Delivery</h2>
+                            <p>Gets your documents or packages to their destination, on-demand.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="service-mart service">
-                    <div class="service-icon">
-                        <img src="./Images/mart-icon.png" alt="Food icon">  
+                    <div class="service-pay service">
+                        <div class="service-icon">
+                            <img src="./Images/pay-icon.png" alt="Food icon">    
+                        </div>
+                        <div class="service-desc">
+                            <h2>Pay</h2>
+                            <p>Helps you make cashless payments quickly, safely, and securely.</p>
+                        </div>
                     </div>
-                    <div class="service-desc">
-                        <h2>Mart</h2>
-                        <p>Find everything you need</p>
+                    <div class="service-airtime service">
+                        <div class="service-icon">
+                            <img src="./Images/airtime-icon.png" alt="Food icon">
+                        </div>
+                        <div class="service-desc">
+                            <h2>Airtme</h2>
+                            <p>Helps you stay connected with quick prepaid top-ups.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="service-delivery service">
-                    <div class="service-icon">
-                        <img src="./Images/delivery-icon.png" alt="Food icon">
+                    <div class="service-bills service">
+                        <div class="service-icon">
+                            <img src="./Images/bills-icon.png" alt="Food icon">
+                        </div>
+                        <div class="service-desc">
+                            <h2>Bills</h2>
+                            <p>Makes paying bills less of a chore.</p>
+                        </div>
                     </div>
-                    <div class="service-desc">
-                        <h2>Delivery</h2>
-                        <p>Gets your documents or packages to their destination, on-demand.</p>
+                    <div class="service-rewards service">
+                        <div class="service-icon">
+                            <img src="./Images/rewards-icon.png" alt="Food icon">
+                        </div>
+                        <div class="service-desc">
+                            <h2>Rewards</h2>
+                            <p>Lets you earn points, and unlock benefits with every Grab transaction.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="service-pay service">
-                    <div class="service-icon">
-                        <img src="./Images/pay-icon.png" alt="Food icon">    
-                    </div>
-                    <div class="service-desc">
-                        <h2>Pay</h2>
-                        <p>Helps you make cashless payments quickly, safely, and securely.</p>
-                    </div>
-                </div>
-                <div class="service-airtime service">
-                    <div class="service-icon">
-                        <img src="./Images/airtime-icon.png" alt="Food icon">
-                    </div>
-                    <div class="service-desc">
-                        <h2>Airtme</h2>
-                        <p>Helps you stay connected with quick prepaid top-ups.</p>
-                    </div>
-                </div>
-                <div class="service-bills service">
-                    <div class="service-icon">
-                        <img src="./Images/bills-icon.png" alt="Food icon">
-                    </div>
-                    <div class="service-desc">
-                        <h2>Bills</h2>
-                        <p>Makes paying bills less of a chore.</p>
-                    </div>
-                </div>
-                <div class="service-rewards service">
-                    <div class="service-icon">
-                        <img src="./Images/rewards-icon.png" alt="Food icon">
-                    </div>
-                    <div class="service-desc">
-                        <h2>Rewards</h2>
-                        <p>Lets you earn points, and unlock benefits with every Grab transaction.</p>
-                    </div>
-                </div>
-                <div class="service-gifts service">
-                    <div class="service-icon">
-                        <img src="./Images/gift-icon.png" alt="Food icon">
-                    </div>
-                    <div class="service-desc">
-                        <h2>Gifts</h2>
-                        <p>Send fun yet practical Grab gift cards to family and friends</p>
+                    <div class="service-gifts service">
+                        <div class="service-icon">
+                            <img src="./Images/gift-icon.png" alt="Food icon">
+                        </div>
+                        <div class="service-desc">
+                            <h2>Gifts</h2>
+                            <p>Send fun yet practical Grab gift cards to family and friends</p>
+                        </div>
                     </div>
                 </div>
             </div>
